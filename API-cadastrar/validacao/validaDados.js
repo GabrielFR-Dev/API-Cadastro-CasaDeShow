@@ -1,6 +1,6 @@
 function validaNome(nome) {
     
-    const regexNome = /^[A-Za-zÀ-ÿ\s'-]+$/;
+    const regexNome = /^(?=.{2,100}$)[A-Za-zÀ-ÿ]+(?:[ '-][A-Za-zÀ-ÿ]+)*$/;
 
     return regexNome.test(nome);
 }
