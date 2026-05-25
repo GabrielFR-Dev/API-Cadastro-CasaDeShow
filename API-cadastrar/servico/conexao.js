@@ -1,13 +1,13 @@
-import mysql from 'myslq2/promise';
+import mysql from 'mysql2/promise';
 import env from 'dotenv';
 
 env.config();
 
 const pool = mysql.createPool({
-    host: env.process.CS_HOST,
-    user: env.process.CS_USER,
-    password: env.process.CS_PASSWORD,
-    database: env.process.CS_DATABASE
+    host: process.env.CS_HOST,
+    user: process.env.CS_USER,
+    password: process.env.CS_PASSWORD,
+    database: process.env.CS_DATABASE
 })
 
 export default pool
